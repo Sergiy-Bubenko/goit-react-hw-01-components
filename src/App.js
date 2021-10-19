@@ -1,19 +1,21 @@
 import './App.css';
-import { Gallery } from './components/Gallery/Gallery';
+
 import Profile from './components/Profile/Profile';
 import user from './user.json';
+
 import Statistics from './components/Statistics/Statistics';
 import statisticalData from './statistical-data.json';
 
-console.log(user);
-console.log(statisticalData);
+import { FriendList } from './components/FriendList/FriendList';
+import friends from './friends.json';
 
-// const title = '';
+import { TransactionHistory } from './components/TransactionHistory/TransactionHistory';
+import transactions from './transactions.json';
+
 export default function App() {
   return (
     <div className="App">
       FE-35 Module 1 Lesson 1
-      <Gallery />
       <Profile
         name={user.name}
         tag={user.tag}
@@ -22,6 +24,8 @@ export default function App() {
         stats={user.stats}
       />
       <Statistics title={statisticalData.title} stats={statisticalData} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 }

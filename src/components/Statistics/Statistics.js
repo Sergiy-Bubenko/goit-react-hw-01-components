@@ -1,6 +1,6 @@
-export default function Statistics({ stats, title }) {
-  console.log('stats', stats);
+import PropTypes from 'prop-types';
 
+export default function Statistics({ stats, title }) {
   return (
     <section className="statistics">
       {title && <h2 className="title"> {title}</h2>}
@@ -17,3 +17,17 @@ export default function Statistics({ stats, title }) {
     </section>
   );
 }
+
+Statistics.defaultProps = {
+  title: 'Upload stats',
+};
+
+Statistics.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    }),
+  ),
+};

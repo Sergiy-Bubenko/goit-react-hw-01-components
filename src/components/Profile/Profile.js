@@ -27,3 +27,18 @@ export default function Profile(user) {
     </div>
   );
 }
+
+Profile.propTypes = {
+  user: PropTypes.shape({
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    tag: PropTypes.string,
+    location: PropTypes.string,
+
+    stats: PropTypes.shape({
+      followers: PropTypes.number,
+      views: PropTypes.number,
+      likes: PropTypes.number,
+    }),
+  }),
+};
