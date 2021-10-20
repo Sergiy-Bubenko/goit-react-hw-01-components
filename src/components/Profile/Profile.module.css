@@ -1,0 +1,41 @@
+.profile {
+  width: 320px;
+  margin: auto;
+  padding-top: 25px;
+  outline: 2px solid rgb(238, 218, 199);
+  border-radius: 6px;
+
+  background-color: linen;
+}
+
+.avatar {
+  height: 35%;
+  width: 35%;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 25px;
+
+  background-color: rgb(236, 228, 228);
+}
+
+.statsItem {
+  padding: 15px 0;
+  border: 2px solid rgb(216, 198, 198);
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.quantity {
+  composes: name;
+}

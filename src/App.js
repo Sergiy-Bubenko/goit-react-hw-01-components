@@ -15,7 +15,6 @@ import transactions from './transactions.json';
 export default function App() {
   return (
     <div className="App">
-      FE-35 Module 1 Lesson 1
       <Profile
         name={user.name}
         tag={user.tag}
