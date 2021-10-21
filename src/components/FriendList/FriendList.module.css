@@ -1,0 +1,40 @@
+.item {
+  width: 250px;
+  margin: auto;
+  padding-left: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.status::before {
+  display: block;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  margin: 15px;
+}
+
+.status[data-is-online='false']::before {
+  background-color: tomato;
+}
+
+.status[data-is-online='true']::before {
+  background-color: green;
+}
+
+.avatar {
+  margin-right: 15px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
